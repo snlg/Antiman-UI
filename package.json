@@ -4,7 +4,8 @@
   "description": ":construction_worker: An personal UI design framework and React-based implementation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rimraf _site && mkdir _site && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,15 @@
     "@babel/types": "^7.0.0-beta.51",
     "@types/react": "^16.3.18",
     "@types/react-dom": "^16.0.6",
+    "bisheng": "^0.28.3",
+    "concurrently": "^3.5.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "omit.js": "^1.0.0",
     "prop-types": "^15.6.1"
   }
 }
